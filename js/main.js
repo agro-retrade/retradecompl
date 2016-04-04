@@ -36,4 +36,21 @@ $(document).ready(function() {
     $(this).find('.project-title').fadeToggle()
   })
 
+
+// LIST MORE LESS
+  $('ul.collapse').wrap('<div class="collapseWrapper" />');
+  $('div.collapseWrapper').css({ 'height' : '250px' }).after('<a href="#" class="collapseMore btn btn-success btn-green">POKAŻ WIĘCEJ</a>');
+
+  $('a.collapseMore').click(function () {
+      if ($(this).hasClass('expanded')) {
+          $(this).prev().animate({ height: '250px' }, 500);
+          $(this).text('POKAŻ WIĘCEJ').removeClass('expanded');
+      }
+      else {
+          $(this).prev().animate({ height: $(this).prev().find( 'ul.collapse' ).outerHeight(true) }, 500);
+          $(this).text('POKAŻ MNIEJ').addClass('expanded');
+      }
+      return false;
+  });
+
 });
