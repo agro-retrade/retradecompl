@@ -27,7 +27,7 @@
         <div class='slide-caption'>
           <div class='vertical-align-middle'>
             <center>
-              <img alt='Logo' class='skrollable wow fadeIn' data-200='top: 270px; opacity: 0;' data-start='top: 0px; opacity: 1;' src='/css/images/agro.svg' style='top: 0px; opacity: 1; margin-right: 250px;'>
+              <img alt='Logo' class='logoimg skrollable wow fadeIn' data-200='top: 270px; opacity: 0;' data-start='top: 0px; opacity: 1;' src='/css/images/agro.svg' style='top: 0px; opacity: 1; margin-right: 250px; height: auto'>
             </center>
           </div>
         </div>
@@ -41,22 +41,25 @@
   <div class='navbar navbar-fixed-top' id='navigation'>
     <div class='navbar-inner'>
       <div class='container no-padding'>
+        <a class='show-menu collapsed' data-target='.nav-collapse' data-toggle='collapse'>
+          <span class='show-menu-bar'></span>
+        </a>
         <div id='logo'>
           <a class='external' href='index.html'></a>
         </div>
-        <div class='navbar-collapse collapse' id='navbar'>
+        <div class='nav-collapse collapse' style='height: 0px;'>
           <ul class='nav navbar-nav'>
             <li class='menu-1'>
-              <a class='page-scroll' href='#start'>Start</a>
+              <a class='colapse-menu1 page-scroll' href='#start'>Start</a>
             </li>
             <li class='menu-2'>
-              <a class='page-scroll' href='#uslugi'>Usługi</a>
+              <a class='colapse-menu1 page-scroll' href='#uslugi'>Usługi</a>
             </li>
             <li class='menu-3'>
-              <a class='page-scroll' href='#ofirmie'>O firmie</a>
+              <a class='colapse-menu1 page-scroll' href='#ofirmie'>O firmie</a>
             </li>
             <li class='menu-4'>
-              <a class='page-scroll' href='#contact'>Kontakt</a>
+              <a class='colapse-menu1 page-scroll' href='#contact'>Kontakt</a>
             </li>
           </ul>
         </div>
@@ -262,6 +265,9 @@
             <div class='col-xs-3 map'>
               <iframe height='350' src='https://www.google.com/maps/d/embed?mid=zzihSspWjZzc.kiywXmcArjhg' width='100%'></iframe>
             </div>
+            <div class='col-xs-2 name wow slideInUp'>
+              <img alt='Logo' class='responsive' src='/css/images/agro-white.svg'>
+            </div>
             <div class='col-xs-5'>
               <div class='row'>
                 <div class='col-xs-6 wow slideInUp'>
@@ -294,9 +300,6 @@
                 </div>
               </div>
             </div>
-            <div class='col-xs-2 name wow slideInUp'>
-              <img alt='Logo' class='responsive' src='/css/images/agro-white.svg'>
-            </div>
           </div>
         </div>
       </section>
@@ -312,57 +315,6 @@
   </div>
 </div>
 
-
-    <div aria-labelledby='myModalLabel' class='modal fade' id='contact-modal' role='dialog' tabindex='-1'>
-  <div class='modal-dialog small' role='document'>
-    <div class='modal-content'>
-      <div class='modal-header'>
-        <button aria-label='Close' class='close mfp-close' data-dismiss='modal' type='button'>×</button>
-        <p class='modal-title' id='myModalLabel'>Pozostańmy w kontakcie!</p>
-      </div>
-      <div class='modal-body'>
-        <form action='//formspree.io/lasecki.mic@gmail.com' id='contactForm' method='POST' name='sentMessage' novalidate=''>
-          <div class='row control-group'>
-            <div class='form-group col-xs-12 floating-label-form-group controls'>
-              <label>Imię</label>
-              <input class='form-control' data-validation-required-message='Wpisz swoje imię.' id='name' name='name' placeholder='Imię' required='' type='text'>
-                <p class='help-block text-danger'></p>
-              </input>
-            </div>
-          </div>
-          <div class='row control-group'>
-            <div class='form-group col-xs-12 floating-label-form-group controls'>
-              <label>Email</label>
-              <input class='form-control' data-validation-required-message='Wpisz swój adres email.' id='email' name='_replyto' placeholder='Email' required='' type='email'>
-                <p class='help-block text-danger'></p>
-              </input>
-            </div>
-          </div>
-          <div>
-            <input name='_subject' type='hidden' value='New message from your page boss!'>
-            <input name='_gotcha' style='display:none' type='text'>
-            <input name='_next' type='hidden' value='//mike-weasel.me/#contact'>
-          </div>
-          <div class='row control-group'>
-            <div class='form-group col-xs-12 floating-label-form-group controls'>
-              <label>Wiadomość</label>
-              <textarea class='form-control' data-validation-required-message='Wpisz treść wiadomości.' id='message' name='message' placeholder='Wiadomość' required='' rows='5'></textarea>
-              <p class='help-block text-danger'></p>
-            </div>
-          </div>
-          <br>
-            <div id='success'></div>
-            <div class='row'>
-              <div class='form-group col-xs-12 col-xs-offset-4'>
-                <button class='btn btn mail-to' type='submit'>WYŚLIJ!</button>
-              </div>
-            </div>
-          </br>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
 
     <div aria-labelledby='myModalLabel' class='modal fade' id='nasiona' role='dialog' tabindex='-1'>
   <div class='modal-dialog big' role='document'>
@@ -406,7 +358,7 @@
         <div class='row'>
           <div class='col-xs-6 text-center'>
             <h1>SKUPUJEMY / SPRZEDAJEMY</h1>
-            <hr class='down'>
+            <hr class='down skup'>
             <ul class='list-group collapse skup-list'>
               <li class='list-group-item'>pszenicę konsumpcyjną</li>
               <li class='list-group-item'>pszenicę paszową</li>
@@ -433,10 +385,10 @@
               <li class='list-group-item'>gryke</li>
             </ul>
           </div>
-          <div class='col-xs-6'>
+          <div class='col-xs-6 text-center'>
             <h1>SPRZEDAJEMY MATERIAŁ SIEWNY</h1>
             <hr class='down'>
-            <ul class='list-group'>
+            <ul class='list-group collapse skup-zboz'>
               <li class='list-group-item'>zbóż</li>
               <li class='list-group-item'>kukurydzy</li>
               <li class='list-group-item'>rzepaku</li>

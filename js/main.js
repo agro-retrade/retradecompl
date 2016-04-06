@@ -26,6 +26,12 @@ $(document).ready(function() {
 //Sticky Navigation
   $("#navigation").sticky({topSpacing:0});
 
+// NAVIGATION
+
+$('.nav a.colapse-menu1').click(function () {
+  $(".nav-collapse").collapse("hide")
+});
+
 //Tooltip
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
