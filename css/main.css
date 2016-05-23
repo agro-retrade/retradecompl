@@ -5908,21 +5908,85 @@ body {
   font-family: 'Lato', sans-serif;
   color: #fff; }
 
-.vertical-align-middle {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center; }
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s; }
 
-.slide-caption {
-  height: 100%;
-  z-index: 0;
-  display: table;
-  position: relative;
+.demo a:hover {
+  opacity: .5; }
+
+#arrow-down a {
+  padding-top: 60px; }
+
+#arrow-down a span {
+  position: absolute;
   top: 0;
-  width: 80%;
-  margin-left: 0;
-  margin-right: 10%; }
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box; }
 
+#arrow-down a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box; }
+
+#arrow-down a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 3s infinite;
+  box-sizing: border-box; }
+
+@-webkit-keyframes sdb03 {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 1; }
+  60% {
+    box-shadow: 0 0 10px 60px rgba(255, 255, 255, 0.2);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+@keyframes sdb03 {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 1; }
+  60% {
+    box-shadow: 0 0 10px 60px rgba(255, 255, 255, 0.2);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
 ul li {
   list-style: none !important;
   text-decoration: none !important;
@@ -5932,6 +5996,12 @@ ul li {
 ul li a,
 .navbar-default a {
   text-decoration: none; }
+
+.list-group-item {
+  background: rgba(0, 0, 0, 0.2); }
+
+.white-list {
+  background: #fff; }
 
 .parallax-window {
   min-height: 100%;
@@ -5955,21 +6025,22 @@ ul li a,
   background-color: #fff; }
 
 .space-small {
-  height: 200px;
+  height: 150px;
   background-color: #fff; }
 
 #contact .parallax-window-small section {
   height: 70vh; }
 
 #contact .space-small section {
-  height: 200px;
-  padding: 80px 0; }
+  height: 150px;
+  padding: 50px 0; }
 
 #ofirmie .space-small,
 #ofirmie .space-small section {
-  height: 50vh;
+  height: auto;
   padding-top: 5px;
-  background-color: #fff; }
+  background-color: #fff;
+  min-height: 250px; }
 
 #contact hr,
 #ofirmie hr.up {
@@ -6015,7 +6086,7 @@ section {
       text-transform: lowercase;
       border-radius: 5px; }
     section .stuff h4 {
-      color: #999; }
+      color: #222; }
     section .stuff span {
       color: #83BF1F; }
     section .stuff span.fa.fa-envelope {
@@ -6114,6 +6185,9 @@ hr.down.skup {
   background-color: #83BF1F;
   border: none; }
 
+.table-hover > tbody > tr:hover {
+  background-color: #83BF1F; }
+
 .img-responsive {
   display: block;
   max-width: 100%;
@@ -6125,7 +6199,14 @@ hr.down.skup {
 .portfolio-box {
   margin-bottom: 30px;
   position: relative;
-  display: block; }
+  display: block;
+  -moz-transition: top 0.2s;
+  -o-transition: top 0.2s;
+  -webkit-transition: top 0.2s;
+  transition: top 0.2s; }
+
+.highlighted {
+  top: -10px; }
 
 .portfolio-box .portfolio-box-caption {
   color: white;
@@ -6175,6 +6256,27 @@ hr.down.skup {
 
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 16px; } }
+.blur {
+  filter: blur(2px) grayscale(100%);
+  -moz-filter: blur(2px) grayscale(100%);
+  -webkit-filter: blur(2px) grayscale(100%); }
+
+#nasiona p,
+#nawozy p {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: justify; }
+
+#nasiona p {
+  font-size: 1.1em; }
+
+#nasiona ul {
+  width: 60%; }
+
+#nawozy p.center {
+  text-align: center; }
+
 #dlaczego-my img {
   height: 200px;
   float: left;
@@ -6185,7 +6287,10 @@ hr.down.skup {
   color: #fff;
   font-size: 1.5em;
   float: right;
-  text-align: justify; }
+  text-align: justify;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px; }
 #dlaczego-my section, #dlaczego-my .parallax-window-small {
   height: auto; }
 
@@ -6206,7 +6311,7 @@ hr.down.skup {
   margin-top: 35px;
   font-size: 1.3em;
   color: #222;
-  text-align: center; }
+  text-align: justify; }
 
 #ofirmie hr.up {
   margin: 0 !important; }
@@ -6226,10 +6331,9 @@ hr.down {
   width: 80%; }
 
 .modal-content {
-  color: #222; }
-
-.modal-content {
-  background-color: #fff; }
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase; }
 
 .modal-header {
   padding: 25px;
@@ -6320,48 +6424,6 @@ button.close {
     height: 70px; }
   #space-contact .name {
     padding: 100px 0 0 20px; } }
-.tooltip > .tooltip-inner {
-  background-color: rgba(0, 0, 0, 0.8);
-  font-size: 16px; }
-
-#skrollr-body {
-  width: 100%;
-  height: 100%;
-  position: fixed; }
-
-#skrollr-body div {
-  overflow: hidden;
-  position: fixed; }
-
-div {
-  display: block; }
-
-/*-- positions --*/
-.centred {
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center; }
-
-/*-- logo --*/
-#logo-inner {
-  padding: 15px; }
-
-/*-- content --*/
-#stayFront {
-  z-index: 1001; }
-
-#main-left #main-right {
-  background: center center no-repeat; }
-
-.scene {
-  position: fixed;
-  width: 100%;
-  height: 100%; }
-
 #logo {
   background: url("images/logo.svg") 10px 3px #fff no-repeat;
   background-size: 45px 45px;
@@ -6443,13 +6505,15 @@ div {
   color: #fff;
   height: 100%;
   transition: all 0.3s ease-out 0s;
-  border-radius: 25px 15px;
+  border-radius: 10px;
   padding: 10px; }
 
 .navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
   color: #444;
   text-decoration: none;
+  border-radius: 10px;
   height: 100%;
+  padding: 10px;
   transition: all 0.3s ease-out 0s; }
 
 .navbar .show-menu {

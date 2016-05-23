@@ -49,7 +49,7 @@ $(document).ready(function() {
     var $anchor;
     $anchor = $(this);
     $('html, body').stop().animate({
-      scrollTop: $($anchor.attr('href')).offset().top
+      scrollTop: $($anchor.attr('href')).offset().top -50
     }, 1250, 'easeInOutExpo');
   });
 });
