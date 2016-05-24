@@ -6277,6 +6277,9 @@ hr.down.skup {
 #nawozy p.center {
   text-align: center; }
 
+.meet:hover {
+  color: #83BF1F; }
+
 #dlaczego-my img {
   height: 200px;
   float: left;
