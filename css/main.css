@@ -6032,7 +6032,7 @@ ul li a,
   height: 70vh; }
 
 #contact .space-small section {
-  height: 150px;
+  height: auto;
   padding: 50px 0; }
 
 #ofirmie .space-small,
